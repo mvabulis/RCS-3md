@@ -1,0 +1,78 @@
+main {
+    background-color: aquamarine; 
+    font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif
+}
+h1{
+    display:flex;
+    justify-content: center;
+    color: gray;
+}
+.navigation{
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr 1fr;
+    grid-template-areas:
+    "svalue fvalue cleardivs"
+    "evalue bvalue generatedivs";
+    grid-gap: 0.5em;
+    margin-bottom: 10px;
+}
+.svalue{
+    grid-area: svalue;
+}
+.fvalue{
+    grid-area: fvalue;
+}
+.evalue{
+    grid-area: evalue;
+}
+.bvalue{
+    grid-area: bvalue;
+}
+.cleardivs{
+    grid-area: cleardivs;
+}
+.generatedivs{
+    grid-area: generatedivs;
+}
+.navigation>div{
+    border: 2px solid gray;
+}
+.numbers{
+    display: grid;
+    grid-template-columns: repeat(10, 95px);
+    grid-template-rows: repeat(10, 75px);
+    /*grid-template-areas: repeat(10, ". . . . . . . . . .");*/ /*ŠO LAIKAM NEVAJAG*/
+    grid-gap: 0.5em;
+}
+.numbers>div{
+    border: 2px solid gray;
+    border-radius: 12%;
+    display: flex;
+    justify-content: center;
+    padding-top: 25px;
+}
+
+/*TABLET SIZE*/
+@media (max-width: 1112px){
+    .numbers{
+        display: grid;
+        grid-template-columns: repeat(5, 95px);
+        grid-template-rows: repeat(20, 75px);
+        /*grid-template-areas: repeat(10, ". . . . . . . . . .");*/ /*ŠO LAIKAM NEVAJAG*/
+        grid-gap: 0.3em;
+}
+
+/*MOBILE SIZE*/
+@media (max-width: 600px){
+    .numbers{
+        display: grid;
+        grid-template-columns: repeat(2, 95px);
+        grid-template-rows: repeat(50, 75px);
+        /*grid-template-areas: repeat(10, ". . . . . . . . . .");*/ /*ŠO LAIKAM NEVAJAG*/
+        grid-gap: 0.2em;
+    }
+    h1{
+        font-size: 1.5em;
+    }
+}

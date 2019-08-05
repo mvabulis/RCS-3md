@@ -1,8 +1,6 @@
 function main() {
     
     console.log("Starting Fizz");
-
-    //const main = document.getElementById('buttons');
     
     for (let i=1; i <101; i++){ 
         const myDiv = document.createElement("div");

@@ -1,13 +1,15 @@
 main {
     background-color: aquamarine; 
-    font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif
+    font-family: Roboto, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 20px 0px;
 }
 h1{
     display:flex;
     justify-content: center;
     color: gray;
 }
-.navigation{
+/*Bonus controls*/
+/*.navigation{
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr 1fr;
@@ -37,13 +39,13 @@ h1{
 }
 .navigation>div{
     border: 2px solid gray;
-}
+}*/
 .numbers{
     display: grid;
     grid-template-columns: repeat(10, 95px);
     grid-template-rows: repeat(10, 75px);
-    /*grid-template-areas: repeat(10, ". . . . . . . . . .");*/ /*ŠO LAIKAM NEVAJAG*/
     grid-gap: 0.5em;
+    justify-content: center;
 }
 .numbers>div{
     border: 2px solid gray;
@@ -51,6 +53,7 @@ h1{
     display: flex;
     justify-content: center;
     padding-top: 25px;
+    background-color: whitesmoke;
 }
 
 /*TABLET SIZE*/
@@ -59,8 +62,11 @@ h1{
         display: grid;
         grid-template-columns: repeat(5, 95px);
         grid-template-rows: repeat(20, 75px);
-        /*grid-template-areas: repeat(10, ". . . . . . . . . .");*/ /*ŠO LAIKAM NEVAJAG*/
         grid-gap: 0.3em;
+    }
+    .numbers>div{
+        font-size: 13px;
+    }
 }
 
 /*MOBILE SIZE*/
@@ -69,9 +75,9 @@ h1{
         display: grid;
         grid-template-columns: repeat(2, 95px);
         grid-template-rows: repeat(50, 75px);
-        /*grid-template-areas: repeat(10, ". . . . . . . . . .");*/ /*ŠO LAIKAM NEVAJAG*/
         grid-gap: 0.2em;
     }
+}
     h1{
         font-size: 1.5em;
     }
